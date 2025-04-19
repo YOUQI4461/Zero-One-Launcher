@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="./mdui/css/mdui.min.css">
+    <title>Launcher</title>
+
+    <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+    <script>
+      var vConsole = new window.VConsole()
+    </script>
+
+    <script src="./js/tool.js" defer></script>
+    <script src="./js/set.js" defer></script>
+
+    <link rel="manifest" href="./index.webmanifest">
+  </head>
+  <body class="mdui-theme-primary-blue-grey">
+    <div class="mdui-tab mdui-tab-scrollable mdui-color-theme" mdui-tab>
+      <a href="#ZOMCL" class="mdui-ripple" disabled>01-Launcher</a>
+      <a href="#zo_index" class="mdui-ripple mdui-tab-active">主页</a>
+      <a href="#zo_settings" class="mdui-ripple">设置</a>
+    </div>
+    <div>
+      <div id="zo_index" class="mdui-p-a-2">
+        <div class="mdui-card">
+          <div class="mdui-card-header">
+            <img class="mdui-card-header-avatar" src="res/user.png"/>
+            <div class="mdui-card-header-title">01-Launcher</div>
+            <div class="mdui-card-header-subtitle">Ver 0.0.0</div>
+          </div>
+        </div>
+        <div class="mdui-progress">
+          <div class="mdui-progress-indeterminate"></div>
+        </div>
+        <a onclick="startMinecraft()" class="mdui-btn mdui-btn-block mdui-ripple mdui-color-theme mdui-btn-raised">
+            启动
+        </a>
+        <div class="mdui-progress">
+          <div class="mdui-progress-indeterminate"></div>
+        </div>
+      </div>
+      <div id="zo_settings" class="mdui-p-a-2">
+        <div>
+          <hr>
+          <h2>启动协议链接</h2>
+          <p>点击“主页”的“启动”时打开的链接，乱改可能会导致打开不了 Minecraft 哦！</p>
+          <p>默认是：“minecraft://”</p>
+          <p>现在是：“<a id="mcUrlTip"></a>”</p>
+          <p>iOS如果同时下载了Minecraft的两个版本，比如网易版和国际版，参考这个视频</p>
+          <button onclick="setMcUrl()" class="mdui-btn mdui-btn-block mdui-color-theme mdui-ripple">调整</button>
+        </div>
+        <hr>
+      </div>
+    </div>
+
+    <script src="./mdui/js/mdui.min.js"></script>
+  </body>
+</html>

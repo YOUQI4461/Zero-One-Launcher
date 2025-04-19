@@ -1,0 +1,17 @@
+{
+  "name": "01-Launcher",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#607D8B",
+  "theme_color": "#607D8B",
+  "description": "简而繁的Minecraft启动器",
+  "icons": [
+    {
+      "src": "res/ico512.jpeg",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "orientation": "landscape-primary",
+  "scope": "/"
+}
