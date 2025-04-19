@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" href="./mdui/css/mdui.min.css">
-    <title>Launcher</title>
+    <title>01-Launcher</title>
 
     <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script>
@@ -19,27 +19,35 @@
   </head>
   <body class="mdui-theme-primary-blue-grey">
     <div class="mdui-tab mdui-tab-scrollable mdui-color-theme" mdui-tab>
-      <a href="#ZOMCL" class="mdui-ripple" disabled>01-Launcher</a>
+      <a class="mdui-ripple" disabled>01-Launcher</a>
       <a href="#zo_index" class="mdui-ripple mdui-tab-active">🏠 主页</a>
+      <a href="#zo_mcres" class="mdui-ripple">📦 资源</a>
       <a href="#zo_settings" class="mdui-ripple">⚙️ 设置</a>
     </div>
     <div>
       <div id="zo_index" class="mdui-p-a-2">
-        <div class="mdui-card">
-          <div class="mdui-card-header">
-            <img class="mdui-card-header-avatar" src="res/user.png"/>
-            <div class="mdui-card-header-title">01-Launcher</div>
-            <div class="mdui-card-header-subtitle">Ver 0.0.0</div>
+        <div class="mdui-progress"><div class="mdui-progress-indeterminate"></div></div>
+        <div class="mdui-row">
+          <div class="mdui-col-sm-7 mdui-col-lg-8">
+            <br>
+            <div class="mdui-card">
+              <div class="mdui-card-header">
+                <img class="mdui-card-header-avatar" src="./res/ico512.jpeg"/>
+                <div class="mdui-card-header-title">01-Launcher</div>
+                <div class="mdui-card-header-subtitle">For Minecraft and you.</div>
+              </div>
+              <div class="mdui-card-media">
+                <img src="./res/bg.jpeg"/>
+                <button onclick="startMinecraft()" class="mdui-btn mdui-btn-block mdui-ripple mdui-color-theme">
+                  启动 Minecraft 基岩版
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="mdui-progress">
-          <div class="mdui-progress-indeterminate"></div>
-        </div>
-        <a onclick="startMinecraft()" class="mdui-btn mdui-btn-block mdui-ripple mdui-color-theme mdui-btn-raised">
-            启动
-        </a>
-        <div class="mdui-progress">
-          <div class="mdui-progress-indeterminate"></div>
+          <div class="mdui-col-sm-5 mdui-col-lg-4">
+            <br>
+            <h1># 🔖 书签</h1>
+          </div>
         </div>
       </div>
       <div id="zo_settings" class="mdui-p-a-2">
@@ -49,10 +57,20 @@
           <p>点击“主页”的“启动”时打开的链接，乱改可能会导致打开不了 Minecraft 哦！</p>
           <p>默认是：“minecraft://”</p>
           <p>现在是：“<a id="mcUrlTip"></a>”</p>
-          <p>iOS如果同时下载了Minecraft的两个版本，比如网易版和国际版，参考这个视频</p>
+          <p>
+            iOS如果同时下载了Minecraft的两个版本，比如网易版和国际版。
+            下载 <a href="./res/ZeroOneLauncher-Apple.shortcut">ZOMCL-APPLE</a> 后用 快捷指令 打开，
+            然后点击下面按钮弹出的输入框内输入<code>shortcuts://run-shortcut?name=ZeroOneLauncher-Apple</code>
+          </p>
           <button onclick="setMcUrl()" class="mdui-btn mdui-btn-block mdui-color-theme mdui-ripple">调整</button>
         </div>
+        <div>
+          <hr>
+        </div>
         <hr>
+      </div>
+      <div id="zo_mcres" class="mdui-p-a-2">
+        敬请期待
       </div>
     </div>
 

@@ -1,6 +1,6 @@
 function setMcUrl(){
     const mcUrlFor = localStorage.getItem('mcUrl')
-    const mcUrlSet = prompt(`默认：minecraft://\n现在：${mcUrlFor}`)
+    const mcUrlSet = prompt(`默认：minecraft://\n现在：${mcUrlFor}`, mcUrlFor)
     if(mcUrlSet != null){
       localStorage.setItem("mcUrl", mcUrlSet);
     }
