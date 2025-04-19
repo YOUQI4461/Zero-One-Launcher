@@ -19,4 +19,4 @@ if(localStorage.getItem('zeroIframe') == null){
 
 document.getElementById('mcUrlTip').innerText = localStorage.getItem('mcUrl')
 const zeroIframeNowUrl = localStorage.getItem('zeroIframe')
-document.getElementById('zeroIframeE').innerHTML = `<iframe src='${zeroIframeNowUrl}' weight='100%' height='300'></iframe>`
+document.getElementById('zeroIframeE').innerHTML = localStorage.getItem('zeroIframe')

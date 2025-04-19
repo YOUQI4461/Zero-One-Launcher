@@ -14,6 +14,7 @@
 
     <script src="./js/tool.js" defer></script>
     <script src="./js/set.js" defer></script>
+    <script src="./js/friend.js" defer></script>
 
     <link rel="manifest" href="./index.webmanifest">
   </head>
@@ -21,6 +22,7 @@
     <div class="mdui-tab mdui-tab-scrollable mdui-color-theme" mdui-tab>
       <a class="mdui-ripple" disabled>01-Launcher</a>
       <a href="#zo_index" class="mdui-ripple mdui-tab-active">🏠 主页</a>
+      <a href="#zo_friend" class="mdui-ripple">🔗 联机</a>
       <a href="#zo_mcres" class="mdui-ripple">📦 资源</a>
       <a href="#zo_settings" class="mdui-ripple">⚙️ 设置</a>
     </div>
@@ -68,12 +70,15 @@
         </div>
         <div>
           <hr>
-          <h2>...</h2>
+          <div id="friendSet"></div>
         </div>
         <hr>
       </div>
       <div id="zo_mcres" class="mdui-p-a-2">
         敬请期待
+      </div>
+      <div id="zo_friend" class="mdui-p-a-2">
+        <div id="roomShow"></div>
       </div>
     </div>
 
