@@ -63,6 +63,8 @@ async function joinRoom(rf, ri, sn ){
 }
 
 function setUpFriend(){
+    const yourAddId = localStorage.getItem('friendAddId')
+    const yourXuid = localStorage.getItem('friendXuid')
     if(localStorage.getItem('friendAddId') === null){
         localStorage.setItem('friendAddId','5')
     }
@@ -77,13 +79,17 @@ function setUpFriend(){
     4. HelloMC25 <br>
     5. HelloMC25a <br>
     </p>
+    <p>ADDID : ${yourAddId}</p>
+    <p>XUID : ${yourXuid}</p>
     <div class="mdui-row-xs-2"><div class="mdui-col"><button onclick='setUpConfig("friendXuid")' class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">修改XUID</button></div><div class="mdui-col"><button onclick='setUpConfig("friendAddId")' class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">修改ADDID</button></div></div>`
 }
 
 function setUpConfig(cfg){
     const cfgLocal = localStorage.getItem(cfg)
     const cfgText = prompt(`更改你的${cfg}`,cfgLocal)
-    localStorage.setItem(cfg,cfgText)
+    if(cfgText !== null){
+      localStorage.setItem(cfg,cfgText)
+    }
 }
 
 setUpFriend()
