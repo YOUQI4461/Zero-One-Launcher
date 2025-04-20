@@ -69,7 +69,7 @@ function setUpFriend(){
     if(localStorage.getItem('friendXuid') === null){
         // localStorage.setItem('friendXuid','')
     }
-    document.getElementById('friendSet').innerHTML = `<h1>联机设置</h1><p>XUID 前往 <a href='https://www.cxkes.me/xbox/xuid'>CXKES.ME</a> 查询你的</p><p><a href="https://mc.miaaoo.com/">第三方联机供应商官网</a></p>
+    document.getElementById('friendSet').innerHTML = `<h1>联机设置</h1><p>XUID 前往 <a href='https://www.cxkes.me/xbox/xuid'>CXKES.ME</a> 查询你的（注意：请复制XIUD-DEC）</p><p><a href="https://mc.miaaoo.com/">第三方联机供应商官网</a></p>
     <div class="mdui-row-xs-2"><div class="mdui-col"><button onclick='setUpConfig("friendXuid")' class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">修改XUID</button></div><div class="mdui-col"><button onclick='setUpConfig("friendAddId")' class="mdui-btn mdui-btn-block mdui-color-theme-accent mdui-ripple">修改ADDID</button></div></div>`
 }
 
