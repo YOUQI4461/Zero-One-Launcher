@@ -14,25 +14,22 @@ async function reqRoom(){
             const roomInformation = document.createElement('div')
             roomInformation.innerHTML =  `
 <br>
+<div class="mdui-col-xs-12 mdui-col-sm-6 mdui-col-md-6 mdui-col-lg-4">
 <div class="mdui-card">
-  <div class="mdui-card-media">
-    <img src="card.jpg"/>
-    <div class="mdui-card-media-covered">
-      <div class="mdui-card-primary">
+    <div class="mdui-card-primary">
         <div class="mdui-card-primary-title">${room.customProperties.worldName}</div>
         <div class="mdui-card-primary-subtitle">
-          ${room.customProperties.hostName} - ${room.customProperties.version}
-          <br>
-          ${room.customProperties.worldType}  (${room.customProperties.MemberCount}/${room.customProperties.MaxMemberCount})
+            ${room.customProperties.hostName} - ${room.customProperties.version}
+            <br>
+            ${room.customProperties.worldType}  (${room.customProperties.MemberCount}/${room.customProperties.MaxMemberCount})
         </div>
-      </div>
     </div>
-  </div>
-  <div class="mdui-card-actions">
-    <button class="mdui-btn mdui-ripple" onclick="joinRoom('${room.roomfrom}', '${room.id}', '${room.sessionRef.name}')">加入</button>
-    <button class="mdui-btn mdui-ripple">分享</button>
-  </div>
+    <div class="mdui-card-actions">
+        <button class="mdui-btn mdui-ripple" onclick="joinRoom('${room.roomfrom}', '${room.id}', '${room.sessionRef.name}')">加入</button>
+        <button class="mdui-btn mdui-ripple">分享</button>
+    </div>
 </div>
+<div>
 <br>`
             document.getElementById('roomShow').append(roomInformation)
         }

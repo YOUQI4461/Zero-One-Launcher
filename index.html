@@ -9,12 +9,13 @@
 
     <script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
     <script>
-      var vConsole = new window.VConsole()
+      // var vConsole = new window.VConsole()
     </script>
 
     <script src="./js/tool.js" defer></script>
     <script src="./js/set.js" defer></script>
     <script src="./js/friend.js" defer></script>
+    <script src="./js/debug.js" defer></script>
 
     <link rel="manifest" href="./index.webmanifest">
   </head>
@@ -25,6 +26,7 @@
       <a href="#zo_friend" class="mdui-ripple">🔗 联机</a>
       <a href="#zo_mcres" class="mdui-ripple">📦 资源</a>
       <a href="#zo_settings" class="mdui-ripple">⚙️ 设置</a>
+      <a href="#zo_debug" class="mdui-ripple"></a>
     </div>
     <div>
       <div id="zo_index" class="mdui-p-a-2">
@@ -78,7 +80,13 @@
         敬请期待
       </div>
       <div id="zo_friend" class="mdui-p-a-2">
-        <div id="roomShow"></div>
+        <div id="friendInfo"></div>
+        <div class="mdui-row">
+          <div id="roomShow"></div>
+        </div>
+      </div>
+      <div id="zo_debug" class="mdui-p-a-2">
+        <button onclick="startDebug()">OOO</button>
       </div>
     </div>
 
